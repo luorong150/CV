@@ -24,7 +24,11 @@ nav { display: flex; gap: 26px; }
 nav a { color: var(--muted); font-size: .86rem; text-decoration: none; transition: color .2s ease; }
 nav a:hover { color: var(--accent); }
 
-.hero { padding: 100px 0 86px; color: var(--ink); }
+.hero { padding: 82px 0 68px; color: var(--ink); }
+.hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 64px; align-items: center; }
+.hero-copy { min-width: 0; }
+.hero-portrait { margin: 0; justify-self: end; width: 300px; }
+.hero-portrait img { display: block; width: 100%; height: auto; border: 1px solid var(--line); box-shadow: 0 12px 26px rgba(0, 0, 0, .10); }
 .eyebrow, .section-label { margin: 0; color: var(--accent); font-size: .72rem; font-weight: 700; letter-spacing: .13em; }
 .hero .eyebrow { color: var(--accent); }
 h1 { margin: 11px 0 0; font: 400 clamp(2.9rem, 7vw, 5.25rem)/1.12 var(--serif); letter-spacing: -.06em; }
@@ -42,8 +46,6 @@ h2 { margin: -10px 0 23px; font: 400 clamp(1.7rem, 3.2vw, 2.3rem)/1.35 var(--ser
 h2 span { color: var(--muted); font-size: .58em; font-style: italic; letter-spacing: -.02em; margin-left: .2em; white-space: nowrap; }
 .about p { margin: 0 0 17px; max-width: 780px; color: #303030; }
 .about em { font-family: var(--serif); font-size: .95em; }
-.about-lead { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; align-items: start; margin-bottom: 28px; }
-.profile-photo { display: block; width: 220px; max-width: 100%; height: auto; object-fit: contain; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(0, 0, 0, .10); }
 .contact-card { min-width: 0; }
 .contact-card h2 { margin-top: -10px; }
 .contact-list { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 24px; }
@@ -51,6 +53,8 @@ h2 span { color: var(--muted); font-size: .58em; font-style: italic; letter-spac
 .contact-list dt { color: var(--ink); font-size: .74rem; font-weight: 700; letter-spacing: .04em; }
 .contact-list dd { margin: 3px 0 0; color: #303030; font-size: .88rem; line-height: 1.65; }
 .contact-list a { color: var(--ink); text-decoration-color: #999; text-underline-offset: 3px; }
+.bio-en { margin-top: 26px; padding-top: 21px; border-top: 1px solid var(--line); }
+.bio-en p { color: var(--muted); font-family: var(--serif); font-size: .93rem; line-height: 1.8; }
 
 .publication-list { margin: 0; padding: 0; list-style: none; counter-reset: papers; }
 .publication-list li { counter-increment: papers; position: relative; padding: 0 0 21px 48px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
@@ -72,11 +76,11 @@ footer { margin-top: 20px; border-top: 1px solid var(--line); background: #fff; 
   nav { gap: 14px; }
   nav a { font-size: .76rem; }
   .hero { padding: 70px 0 62px; }
+  .hero-layout { grid-template-columns: minmax(0, 1fr) 190px; gap: 30px; }
+  .hero-portrait { width: 190px; }
   .section { grid-template-columns: 1fr; gap: 17px; padding: 49px 26px; }
   .section-label { font-size: .67rem; }
   .footer-content { min-height: 145px; padding: 28px 0; align-items: flex-start; flex-direction: column; justify-content: center; }
-  .about-lead { grid-template-columns: 180px minmax(0, 1fr); gap: 22px; }
-  .profile-photo { width: 180px; }
   .contact-list { grid-template-columns: 1fr; gap: 12px; }
 }
 
@@ -86,6 +90,7 @@ footer { margin-top: 20px; border-top: 1px solid var(--line); background: #fff; 
   nav a { font-size: .7rem; }
   h1 span { display: block; margin: .17em 0 0; }
   .publication-list li { padding-left: 43px; }
-  .about-lead { grid-template-columns: 1fr; }
-  .profile-photo { width: 220px; }
+  .hero { padding: 58px 0 48px; }
+  .hero-layout { grid-template-columns: 1fr; gap: 28px; }
+  .hero-portrait { justify-self: start; width: min(100%, 280px); }
 }
